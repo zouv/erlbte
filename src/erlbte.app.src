@@ -1,0 +1,8 @@
+{application, erlbte,
+[
+    {description, "Behavior Tree for erlang"},
+    {vsn, "1.0.0"},
+    {registered, []},
+    {applications, [kernel, stdlib]},
+    {env, []}
+]}.
