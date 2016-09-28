@@ -1,0 +1,54 @@
+{
+    "title": "A Behavior Tree",
+    "description": "",
+    "root": "8f154647-d5a8-46b0-83af-35324d33773c",
+    "display": {
+        "camera_x": 1366,
+        "camera_y": 648,
+        "camera_z": 1,
+        "x": -368,
+        "y": -64
+    },
+    "properties": {},
+    "nodes": {
+        "8f154647-d5a8-46b0-83af-35324d33773c": {
+            "id": "8f154647-d5a8-46b0-83af-35324d33773c",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "顺序节点",
+            "display": {
+                "x": -160,
+                "y": -64
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "2af0f62a-2956-4e38-93db-28d07438164a"
+            ]
+        },
+        "2af0f62a-2956-4e38-93db-28d07438164a": {
+            "id": "2af0f62a-2956-4e38-93db-28d07438164a",
+            "name": "Wait",
+            "title": "Wait",
+            "description": "",
+            "display": {
+                "x": 48,
+                "y": -64
+            },
+            "parameters": {
+                "milliseconds": ""
+            },
+            "properties": {
+                "milliseconds": "单位毫秒"
+            }
+        }
+    },
+    "g_value": {
+        "parameters": {},
+        "id": "GlobalValue",
+        "name": "GlobalValue",
+        "title": "GlobalValue",
+        "description": "全局变量"
+    },
+    "custom_nodes": []
+}

@@ -1,0 +1,135 @@
+{
+    "title": "A Behavior Tree",
+    "description": "",
+    "root": "b7025cc5-af44-4a7c-b627-f51968b51088",
+    "display": {
+        "camera_x": 1366,
+        "camera_y": 648,
+        "camera_z": 1,
+        "x": -464,
+        "y": -16
+    },
+    "properties": {},
+    "nodes": {
+        "b7025cc5-af44-4a7c-b627-f51968b51088": {
+            "id": "b7025cc5-af44-4a7c-b627-f51968b51088",
+            "name": "RandomSelector",
+            "title": "RandomSelector",
+            "description": "随机选择节点",
+            "display": {
+                "x": -256,
+                "y": -16
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "0cb499a9-abff-4809-8afc-b132c0bb6cbe",
+                "5e3b77f6-7d41-46cc-98c1-b40be501ef0a",
+                "b09496f8-4192-46e7-9114-19eca4048ad3"
+            ]
+        },
+        "0cb499a9-abff-4809-8afc-b132c0bb6cbe": {
+            "id": "0cb499a9-abff-4809-8afc-b132c0bb6cbe",
+            "name": "RepeatUntilSuccess",
+            "title": "RepeatUntilSuccess",
+            "description": "重复执行直到子节点返回成功",
+            "display": {
+                "x": -48,
+                "y": -80
+            },
+            "parameters": {
+                "maxLoop": -1
+            },
+            "properties": {
+                "maxLoop": "最大重复次数，-1表示无限"
+            },
+            "child": "5381fa95-811b-4b65-a61c-ef6f4bd5539a"
+        },
+        "5381fa95-811b-4b65-a61c-ef6f4bd5539a": {
+            "id": "5381fa95-811b-4b65-a61c-ef6f4bd5539a",
+            "name": "Inverter",
+            "title": "Inverter",
+            "description": "",
+            "display": {
+                "x": 160,
+                "y": -80
+            },
+            "parameters": {},
+            "properties": {},
+            "child": "cff3d48e-896b-4f62-87cc-f7a1c2d4f3ef"
+        },
+        "cff3d48e-896b-4f62-87cc-f7a1c2d4f3ef": {
+            "id": "cff3d48e-896b-4f62-87cc-f7a1c2d4f3ef",
+            "name": "Wait",
+            "title": "Wait",
+            "description": "",
+            "display": {
+                "x": 368,
+                "y": -80
+            },
+            "parameters": {
+                "milliseconds": ""
+            },
+            "properties": {
+                "milliseconds": "单位毫秒"
+            }
+        },
+        "b09496f8-4192-46e7-9114-19eca4048ad3": {
+            "id": "b09496f8-4192-46e7-9114-19eca4048ad3",
+            "name": "Wait",
+            "title": "Wait",
+            "description": "",
+            "display": {
+                "x": -48,
+                "y": 48
+            },
+            "parameters": {
+                "milliseconds": ""
+            },
+            "properties": {
+                "milliseconds": "单位毫秒"
+            }
+        },
+        "5e3b77f6-7d41-46cc-98c1-b40be501ef0a": {
+            "id": "5e3b77f6-7d41-46cc-98c1-b40be501ef0a",
+            "name": "Repeater",
+            "title": "Repeater",
+            "description": "重复执行",
+            "display": {
+                "x": -48,
+                "y": -16
+            },
+            "parameters": {
+                "maxLoop": 3
+            },
+            "properties": {
+                "maxLoop": "最大重复次数，-1表示无限"
+            },
+            "child": "58d3d3a6-5105-467e-88d3-184857c848aa"
+        },
+        "58d3d3a6-5105-467e-88d3-184857c848aa": {
+            "id": "58d3d3a6-5105-467e-88d3-184857c848aa",
+            "name": "Wait",
+            "title": "Wait",
+            "description": "",
+            "display": {
+                "x": 160,
+                "y": -16
+            },
+            "parameters": {
+                "milliseconds": ""
+            },
+            "properties": {
+                "milliseconds": "单位毫秒"
+            }
+        }
+    },
+    "g_value": {
+        "parameters": {},
+        "id": "GlobalValue",
+        "name": "GlobalValue",
+        "title": "GlobalValue",
+        "description": "全局变量"
+    },
+    "custom_nodes": []
+}

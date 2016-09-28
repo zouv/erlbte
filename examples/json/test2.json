@@ -1,0 +1,101 @@
+{
+    "title": "A Behavior Tree",
+    "description": "",
+    "root": "aaa47257-0bd6-478a-87b7-dc925a003d6d",
+    "display": {
+        "camera_x": 1366,
+        "camera_y": 648,
+        "camera_z": 1,
+        "x": -496,
+        "y": -32
+    },
+    "properties": {},
+    "nodes": {
+        "1682e79b-b870-4314-83fd-0b72734b7be8": {
+            "id": "1682e79b-b870-4314-83fd-0b72734b7be8",
+            "name": "Wait",
+            "title": "Wait",
+            "description": "",
+            "display": {
+                "x": 128,
+                "y": -64
+            },
+            "parameters": {
+                "milliseconds": ""
+            },
+            "properties": {
+                "milliseconds": "单位毫秒"
+            }
+        },
+        "fe7005b4-f1d4-472e-a289-7736b19665f3": {
+            "id": "fe7005b4-f1d4-472e-a289-7736b19665f3",
+            "name": "Init",
+            "title": "Init",
+            "description": "",
+            "display": {
+                "x": -80,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {},
+            "child": "eb1ed18e-e51e-4beb-8322-009eb91d77a2"
+        },
+        "eb1ed18e-e51e-4beb-8322-009eb91d77a2": {
+            "id": "eb1ed18e-e51e-4beb-8322-009eb91d77a2",
+            "name": "Wait",
+            "title": "Wait",
+            "description": "",
+            "display": {
+                "x": 128,
+                "y": 0
+            },
+            "parameters": {
+                "milliseconds": ""
+            },
+            "properties": {
+                "milliseconds": "单位毫秒"
+            }
+        },
+        "aaa47257-0bd6-478a-87b7-dc925a003d6d": {
+            "id": "aaa47257-0bd6-478a-87b7-dc925a003d6d",
+            "name": "Selector",
+            "title": "Selector",
+            "description": "选择节点",
+            "display": {
+                "x": -288,
+                "y": -32
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "2e04f772-8d39-44da-8ea3-fd31a6b42d4a",
+                "fe7005b4-f1d4-472e-a289-7736b19665f3"
+            ]
+        },
+        "2e04f772-8d39-44da-8ea3-fd31a6b42d4a": {
+            "id": "2e04f772-8d39-44da-8ea3-fd31a6b42d4a",
+            "name": "RepeatUntilSuccess",
+            "title": "RepeatUntilSuccess",
+            "description": "重复执行直到子节点返回成功",
+            "display": {
+                "x": -80,
+                "y": -64
+            },
+            "parameters": {
+                "maxLoop": -1
+            },
+            "properties": {
+                "maxLoop": "最大重复次数，-1表示无限"
+            },
+            "child": "1682e79b-b870-4314-83fd-0b72734b7be8"
+        }
+    },
+    "g_value": {
+        "parameters": {},
+        "id": "GlobalValue",
+        "name": "GlobalValue",
+        "title": "GlobalValue",
+        "description": "全局变量"
+    },
+    "custom_nodes": []
+}
