@@ -15,9 +15,9 @@ test(FileName) ->
     case file:read_file("json/" ++ FileName) of
 		{ok, EBinary} ->
 			{ok, BteStatus} = bte_ai:init(EBinary),
-			io:format("test___1 ~p~n", [BteStatus#r_bte_status.status]),
+			io:format("s1:~p~n", [BteStatus#r_bte_status.status]),
 			BteStatus1 = bte_ai:tick(BteStatus),
-			io:format("test___2 ~p~n", [BteStatus1#r_bte_status.status]),
+			io:format("s2:~p~n", [BteStatus#r_bte_status.status]),
 			% BteStatus2 = bte_ai:tick(BteStatus1),  % testing bte stack
 			% BteStatus3 = bte_ai:tick(BteStatus2),
 			% BteStatus4 = bte_ai:tick(BteStatus3),
